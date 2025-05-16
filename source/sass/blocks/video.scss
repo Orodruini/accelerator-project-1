@@ -1,0 +1,161 @@
+.video {
+  position: relative;
+
+  width: 320px;
+  height: 170px;
+  margin-top: 30px;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 36px;
+    left: 204px;
+
+    width: 270px;
+    height: 170px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 405px;
+    left: 399px;
+
+    width: 360px;
+    height: 230px;
+  }
+
+  iframe {
+    width: 320px;
+    height: 170px;
+
+    @media (min-width: $tablet-width) {
+      width: 270px;
+      height: 170px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 360px;
+      height: 230px;
+    }
+  }
+
+
+  &:hover .video__button {
+    outline: 2px solid rgba(16, 38, 84, 0.6);
+    background: #ffffff;
+
+    &::after {
+      background: rgba(16, 38, 84, 0.6);
+    }
+  }
+}
+
+
+.video__button {
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  right: 134px;
+
+  width: 52px;
+  height: 52px;
+  padding: 20px;
+  padding-left: 22px;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 50%;
+  outline: 2px solid rgb(237, 2, 51, 0.2);
+  outline-offset: 8px;
+  background: linear-gradient(151.36deg, rgb(237, 2, 51) 18.33%, rgb(0, 62, 183) 93.85%);
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    top: 59px;
+    right: 109px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 79px;
+    right: 144px;
+
+    width: 72px;
+    height: 72px;
+    padding-left: 30px;
+
+    outline-offset: 11px;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    background: #ffffff;
+    background-repeat: no-repeat;
+
+    mask-image: (url("/__spritemap#sprite-video-button-view"));
+    mask-size: 12px 12px;
+
+    @media (min-width: $desktop-width) {
+      width: 17px;
+      height: 17px;
+
+      mask-size: 17px 17px;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    outline: 2px solid rgb(16, 38, 84, 0.5);
+    background: #ffffff;
+
+    &::after {
+      background: rgb(16, 38, 84, 0.5);
+    }
+  }
+
+  &:focus {
+    outline: 2px solid rgb(16, 38, 86, 1);
+    background: #c8c9cc;
+
+    &::after {
+      background: rgb(16, 38, 84);
+    }
+  }
+
+  &:active .video__button {
+    outline: 2px solid rgb(16, 38, 84, 1);
+    background: #ffffff;
+
+    &::after {
+      background: rgb(16, 38, 84);
+    }
+  }
+}
+
+.video__img {
+  @media (min-width: $tablet-width) {
+    z-index: 0;
+    top: -100px;
+    left: 204px;
+
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 305px;
+    left: -766px;
+  }
+}
+
+.video__play {
+  display: block;
+
+  width: 320px;
+  height: 170px;
+}

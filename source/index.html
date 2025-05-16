@@ -1,32 +1,983 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPERGYM</title>
+  <link rel="preload" href="fonts/AlumniSans/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/AlumniSans/AlumniSans-ExtraBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="public/favicon.ico">
+  <link rel="icon" href="public/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="public/apple.png">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="sass/style.scss">
+  <link rel="manifest" href="public/manifest.webmanifest">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="price">price</div>
-    <div data-test="games">games</div>
-    <div data-test="juri">juri</div>
-    <div data-test="features">features</div>
-    <div data-test="offers">offers</div>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<body class="page__body">
+  <h1 class="visually-hidden">Тренажерный зал - SUPERGYM</h1>
+  <header class="main-header" data-test="hero">
+    <section class="main-header__promo">
+      <h2 class="visually-hidden">Логотип и номер телефона тренажерного зала</h2>
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1366px)" srcset="img/logo.svg" width="130" height="26">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="img/logo.svg" width="110" height="22">
+        <img class="main-header__img" src="./img/logo.svg" width="100" height="20" alt="логотип SUPERGYM">
+      </picture>
+      <div class="phone-header">
+        <a class="phone-header__number" href="tel:8-800-555-55-55">
+          8 800 555-55-55
+        </a>
+      </div>
+    </section>
+    <section class="preview">
+      <h2 class="visually-hidden">Превью фитнес центра</h2>
+      <div class="preview__wrapper">
+        <div class="preview__container">
+          <div class="program-activities">
+            <p class="program-activities__item">Тренажёрный зал
+              Групповые занятия
+              Кардио-зона
+            </p>
+          </div>
+          <div class="fitness-center">
+            <p class="fitness-center__town">Омск</p>
+            <h3 class="fitness-center__title">Фитнес
+              центр</h3>
+          </div>
+        </div>
+        <a class="preview__button" href="#ticket">Купить абонемент</a>
+      </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1366px)"
+          srcset="img/hero-img/hero-img-desktop@1x.webp 1x, img/hero-img/hero-img-desktop@2x.webp 2x" width="500"
+          height="524">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/hero-img/hero-img-tablet@1x.webp 1x, ./img/hero-img/hero-img-tablet@2x.webp 2x" width="324"
+          height="390">
+
+        <source type="image/jpeg" media="(min-width: 1366px)"
+          srcset="img/hero-img/hero-img-desktop@1x.jpeg 1x, img/hero-img/hero-img-desktop@2x.jpeg 2x" width="500"
+          height="524">
+        <img class="preview__img" src="./img/hero-img/hero-img-tablet@1x.jpeg" width="324" height="390"
+          srcset="img/hero-img/hero-img-tablet@2x.jpeg 2x" alt="Фитнес центр SUPERGYM">
+      </picture>
+    </section>
+  </header>
+  <main>
+    <section class="gym" data-test="about">
+      <div class="gym__wrapper">
+        <div class="gym__container">
+          <h2 class="gym__title">Тренажёрный зал</h2>
+          <h3 class="gym__preview">Просторный зал площадью 900 кв/м</h3>
+          <p class="gym__content">Supergym – самый большой фитнес центр за&nbsp;Уралом и идеальное место
+            для&nbsp;укрепления тела и
+            здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для&nbsp;всех спортсменов.</p>
+          <p class="gym__content">В зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с 40 тренажёрами.
+            Также в фитнес центре
+            есть несколько оборудованных залов для&nbsp;различных видов групповых занятий.</p>
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1366px)"
+            srcset="img/main-img/main-img-desktop@1x.webp 1x, img/main-img/main-img-desktop@2x.webp 2x" width="660"
+            height="400">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/main-img/main-img-tablet@1x.webp 1x, img/main-img/main-img-tablet@2x.webp 2x" width="678"
+            height="345">
+          <source type="image/webp"
+            srcset="img/main-img/main-img-mobile@1x.webp 1x, img/main-img/main-img-mobile@2x.webp 2x" width="320"
+            height="280">
+
+          <source type="image/jpeg" media="(min-width: 1366px)"
+            srcset="img/main-img/main-img-desktop@1x.jpg 1x, img/main-img/main-img-desktop@2x.jpg 2x" width="660"
+            height="400">
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="img/main-img/main-img-tablet@1x.jpg 1x, img/main-img/main-img-tablet@2x.jpg 2x" width="678"
+            height="645">
+          <img class="gym__img" src="./img/main-img/main-img-mobile@1x.jpg" width="320" height="280"
+            srcset="img/main-img/main-img-mobile@2x.jpg 2x" alt="Тренажерный зал">
+        </picture>
+        <div class="video">
+          <button class="video__button" type="button" aria-label="Запустить видео"></button>
+          <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
+            <picture>
+              <source type="image/webp" media="(min-width: 1366px)"
+                srcset="img/video-img/video-img-desktop@1x.webp 1x, img/video-img/video-img-desktop@2x.webp 2x"
+                width="360" height="230">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/video-img/video-img-tablet@1x.webp 1x, img/video-img/video-img-tablet@2x.webp 2x"
+                width="270" height="170">
+              <source type="image/webp"
+                srcset="img/video-img/video-img-mobile@1x.webp 1x, img/video-img/video-img-mobile@2x.webp 2x"
+                width="320" height="170">
+
+              <source type="image/jpeg" media="(min-width: 1366px)"
+                srcset="img/video-img/video-img-desktop@1x.jpeg 1x, img/video-img/video-img-desktop@2x.jpeg 2x"
+                width="360" height="230">
+              <source type="image/jpeg" media="(min-width: 768px)"
+                srcset="img/video-img/video-img-tablet@1x.jpeg 1x, img/video-img/video-img-tablet@2x.jpeg 2x"
+                width="270" height="170">
+              <img class="video__img" src="./img/video-img/video-img-mobile@1x.jpeg" width="320" height="170"
+                srcset="img/main-img/main-img-mobile@2x.jpeg 2x" alt="Видео тренажерного зала">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="season-ticket" data-test="price" id="ticket">
+      <div class="season-ticket__wrapper">
+        <h2 class="season-ticket__title">Абонементы</h2>
+        <div class="filter">
+          <ul class="filter__list">
+            <li class="filter__item">
+              <button class="filter__button filter__button--active" type="button" data-tab="#tab-1">1 месяц</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__button" type="button" data-tab="#tab-2">6 месяцев</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__button" type="button" data-tab="#tab-3">12 месяцев</button>
+            </li>
+          </ul>
+        </div>
+        <div class="offers">
+          <ul class="offers__list offers__list--active" id="tab-1">
+            <li class="offers__item" tabindex="-1">
+              <h3 class="offers__title">С тренером</h3>
+              <p>12 занятий</p>
+              <p class="offers__price" data-price="5000">5000</p>
+              <a class="offers__button" href="#" tabindex="0">Купить абонемент</a>
+            </li>
+            <li class="offers__item" tabindex="-1">
+              <h3 class="offers__title">Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <p class="offers__price" data-price="1700">1700</p>
+              <a class="offers__button" href="#" tabindex="0">Купить абонемент</a>
+            </li>
+            <li class="offers__item" tabindex="-1">
+              <h3 class="offers__title">Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <p class="offers__price" data-price="2700">2700</p>
+              <a class="offers__button" href="#" tabindex="0">Купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="offers__list" id="tab-2">
+            <li class="offers__item">
+              <h3 class="offers__title">С тренером</h3>
+              <p>12 занятий</p>
+              <p class="offers__price" data-price="30000">30000</p>
+              <a class="offers__button" href="#">Купить абонемент</a>
+            </li>
+            <li class="offers__item">
+              <h3 class="offers__title">Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <p class="offers__price" data-price="10200">10200</p>
+              <a class="offers__button" href="#">Купить абонемент</a>
+            </li>
+            <li class="offers__item">
+              <h3 class="offers__title">Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <p class="offers__price" data-price="16200">16200</p>
+              <a class="offers__button" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="offers__list" id="tab-3">
+            <li class="offers__item">
+              <h3 class="offers__title">С тренером</h3>
+              <p>12 занятий</p>
+              <p class="offers__price" data-price="60000">60000</p>
+              <a class="offers__button" href="#">Купить абонемент</a>
+            </li>
+            <li class="offers__item">
+              <h3 class="offers__title">Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <p class="offers__price" data-price="20400">20400</p>
+              <a class="offers__button" href="#">Купить абонемент</a>
+            </li>
+            <li class="offers__item">
+              <h3 class="offers__title">Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <p class="offers__price" data-price="32400">32400</p>
+              <a class="offers__button" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="super-games" data-test="games">
+      <div class="super-games__wrapper-container">
+        <div class="super-games__wrapper">
+          <div class="super-games__container">
+            <h2 class="super-games__title">SUPER GAMES</h2>
+            <div class="date">
+              <ul class="date__list">
+                <li class="date__item">
+                  <h3 class="date__title">Дата</h3>
+                  <p>7<time class="date__time" datetime="2019-03-07">Марта 2019</time></p>
+                </li>
+                <li class="date__item">
+                  <h3 class="date__title">Время</h3>
+                  <p><time class="date__time" datetime="12:00">12:00</time></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="super-games__announcement">Ежегодные соревнования по CrossFit</p>
+          <a class="super-games__button" href="#">заполнить заявку</a>
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1366px)"
+            srcset="img/games-img/games-img-desktop@1x.webp 1x, img/games-img/games-img-desktop@2x.webp 2x" width="660"
+            height="500">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/games-img/games-img-tablet@1x.webp 1x, img/games-img/games-img-tablet@2x.webp 2x" width="378"
+            height="348">
+          <source type="image/webp"
+            srcset="img/games-img/games-img-mobile@1x.webp 1x, img/games-img/games-img-mobile@2x.webp 2x" width="290"
+            height="290">
+
+          <source type="image/jpeg" media="(min-width: 1366px)"
+            srcset="img/games-img/games-img-desktop@1x.jpg 1x, img/games-img/games-img-desktop@2x.jpg 2x" width="660"
+            height="5000">
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="img/games-img/games-img-tablet@1x.jpg 1x, img/games-img/games-img-tablet@2x.jpg 2x" width="378"
+            height="348">
+          <img class="super-games__img" src="./img/games-img/games-img-mobile@1x.jpg" width="300" height="290"
+            srcset="img/games-img/games-img-mobile@2x.jpg 2x" alt="Ежегодные сорвенования">
+        </picture>
+      </div>
+    </section>
+    <section class="jury" data-test="juri">
+      <div class="jury__wrapper">
+        <h2 class="jury__title">Жюри</h2>
+        <div class="jury__slider">
+          <div class="jury__container swiper">
+            <ul class="jury__list swiper-wrapper">
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-anna@1x.webp 1x, img/jury/jury-anna@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury_anna@1x.jpeg" width="260" height="300"
+                      srcset="img/jury/jury_anna@2x.jpeg 2x" alt="Член жюри Анна Павлова">
+                  </picture>
+                  <figcaption class="mask__name">Анна Павлова</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Анна Павлова</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-alexey@1x.webp 1x, img/jury/jury-alexey@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury-alexey@1x.jpeg" width="260" height="300"
+                      srcset="img/jury/jury-alexey@2x.jpeg 2x" alt="Член жюри Алексей Лавров">
+                  </picture>
+                  <figcaption class="mask__name">Алексей Лавров</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Алексей Лавров</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-alex@1x.webp 1x, img/jury/jury-alex@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury-alex@1x.jpg" width="260" height="300"
+                      srcset="img/jury/jury-alex@2x.jpg 2x" alt="Член жюри Александр Пашков">
+                  </picture>
+                  <figcaption class="mask__name">Александр Пашков</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Александр Пашков</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-mari@1x.webp 1x, img/jury/jury-mari@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury-mari@1x.jpg" width="260" height="300"
+                      srcset="img/jury/jury-mari@2x.jpg 2x" alt="Член жюри Мария Кетова">
+                  </picture>
+                  <figcaption class="mask__name">Мария Кетова</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Мария Кетова</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-anna@1x.webp 1x, img/jury/jury-anna@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury_anna@1x.jpeg" width="260" height="300"
+                      srcset="img/jury/jury_anna@2x.jpeg 2x" alt="Член жюри Анна Павлова">
+                  </picture>
+                  <figcaption class="mask__name">Анна Павлова</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Анна Павлова</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-alexey@1x.webp 1x, img/jury/jury-alexey@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury-alexey@1x.jpeg" width="260" height="300"
+                      srcset="img/jury/jury-alexey@2x.jpeg 2x" alt="Член жюри Алексей Лавров">
+                  </picture>
+                  <figcaption class="mask__name">Алексей Лавров</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Алексей Лавров</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-alex@1x.webp 1x, img/jury/jury-alex@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury-alex@1x.jpg" width="260" height="300"
+                      srcset="img/jury/jury-alex@2x.jpg 2x" alt="Член жюри Александр Пашков">
+                  </picture>
+                  <figcaption class="mask__name">Александр Пашков</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Александр Пашков</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="jury__item swiper-slide mask" tabindex="0">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/jury/jury-mari@1x.webp 1x, img/jury/jury-mari@2x.webp 2x"
+                      width="260" height="300">
+                    <img class="mask__img" src="./img/jury/jury-mari@1x.jpg" width="260" height="300"
+                      srcset="img/jury/jury-mari@2x.jpg 2x" alt="Член жюри Мария Кетова">
+                  </picture>
+                  <figcaption class="mask__name">Мария Кетова</figcaption>
+                </figure>
+                <div class="mask__container">
+                  <h3 class="mask__title">Мария Кетова</h3>
+                  <p class="mask__specialization">CrossFit</p>
+                  <ul class="mask__list">
+                    <li class="mask__item">
+                      <p class="mask__item-text">Certified Level 3 Trainer</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Победитель чемпионата России по CrossFit</p>
+                    </li>
+                    <li class="mask__item">
+                      <p class="mask__item-text">Опыт — 6 лет</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="jury__button jury__button--prev swiper-button swiper-button-prev" type="button">
+            <span class="visually-hidden">предыдущий слайд</span>
+          </button>
+          <button class="jury__button jury__button--next swiper-button-next" type="button">
+            <span class="visually-hidden">следующий слайд</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="advantages" data-test="features">
+      <div class="advantages__wrapper">
+        <h2 class="advantages__title">Наши преимущества</h2>
+        <div class="advantages__container">
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--start">
+              <div>
+                <strong>900</strong>
+                <p>кв/м</p>
+              </div>
+              <div>
+                <h3>Площадь</h3>
+                <span>Занимайтесь без очередей и&nbsp;толкучки</span>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item--start">
+              <div>
+                <strong>70</strong>
+                <p>машин</p>
+              </div>
+              <div>
+                <h3>Собственная парковка</h3>
+                <span>Вы всегда найдёте место для своей машины на нашей парковке</span>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item--middle">
+              <div>
+                <strong>100</strong>
+              </div>
+              <div>
+                <h3>Тренажёров</h3>
+                <p>Современные тренажёры на все группы мышц</p>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item--end">
+              <div>
+                <strong>350</strong>
+                <p>мест</p>
+              </div>
+              <div>
+                <h3>Комфорт</h3>
+                <span>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</span>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item--end">
+              <div>
+                <strong>5+</strong>
+                <p>лет</p>
+              </div>
+              <div>
+                <h3>Тренерский опыт</h3>
+                <span>Добивайтесь своих целей быстрее с профессиональным тренером</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="stocks" data-test="offers">
+      <h2 class="stocks__title">Акции</h2>
+      <div class="stocks__wrapper">
+        <div class="stocks-year">
+          <div class="stocks-year__container">
+            <h3>Год</h3>
+            <p>4999</p>
+            <p>Безлимитный абонемент в тренажёрный зал</p>
+            <a class="stocks-year__button" href="#">подробнее</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)"
+              srcset="img/girl-img/girl-img-desktop@1x.webp 1x, img/girl-img/girl-img-desktop@2x.webp 2x" width="280"
+              height="460">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/girl-img/girl-img-tablet@1x.webp 1x, img/girl-img/girl-img-tablet@2x.webp 2x" width="400"
+              height="462">
+            <source type="image/webp"
+              srcset="img/girl-img/girl-img-mobile@1x.webp 1x, img/girl-img/girl-img-mobile@2x.webp 2x" width="320"
+              height="360">
+
+            <source type="image/jpeg" media="(min-width: 1366px)"
+              srcset="img/girl-img/girl-img-desktop@1x.jpg 1x, img/girl-img/girl-img-desktop@2x.jpg 2x" width="280"
+              height="460">
+            <source type="image/jpeg" media="(min-width: 768px)"
+              srcset="img/girl-img/girl-img-tablet@1x.jpg 1x, img/girl-img/girl-img-tablet@2x.jpg 2x" width="400"
+              height="462">
+            <img src="./img/girl-img/girl-img-mobile@1x.jpg" width="320" height="360"
+              srcset="img/girl-img/girl-img-mobile@2x.jpg 2x" alt="Скидка">
+          </picture>
+        </div>
+        <div class="great-deals">
+          <div class="free-month">
+            <h3>Месяц бесплатно</h3>
+            <p>Приведи друга, получи абонемент в подарок</p>
+            <a class="free-month__button" href="#">подробнее</a>
+          </div>
+          <div class="discount">
+            <h3>Скидка 20%</h3>
+            <p>Корпоративный фитнес с командой</p>
+            <a class="discount__button" href="#">подробнее</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="question-answer" data-test="faq">
+      <h2 class="question-answer__title">Вопросы и ответы</h2>
+      <div class="question-answer__wrapper">
+        <div class="question-answer__container-button">
+          <button class="question-answer__button question-answer__button--active" type="button"
+            data-tabs="#tabs-1">Центр</button>
+          <button class="question-answer__button" type="button" data-tabs="#tabs-2">Абонемент</button>
+          <button class="question-answer__button" type="button" data-tabs="#tabs-3">Услуги</button>
+          <button class="question-answer__button" type="button" data-tabs="#tabs-4">Правила</button>
+        </div>
+        <div class="question-answer__container">
+          <div class="faq faq--active" id="tabs-1">
+            <ul class="faq__list">
+              <li class="faq__item" data-accord="accord-1" data-accords="accords-1">
+                <div class="faq__container-question">
+                  <h3>Как стать членом фитнес&nbsp;-центра?</h3>
+                  <button class="faq__button faq__button--active" type="button" id="accords-1">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer faq__container-answer--active" id="accord-1">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн&nbsp;и договор
+                    придет
+                    вам на
+                    почту.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-2" data-accords="accords-2">
+                <div class="faq__container-question">
+                  <h3>Где можно посмотреть расписание?</h3>
+                  <button class="faq__button" type="button" id="accords-2">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-2">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и
+                    &nbsp;подписать
+                    договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн&nbsp;и договор придет
+                    вам на
+                    почту.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-3" data-accords="accords-3">
+                <div class="faq__container-question">
+                  <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
+                  <button class="faq__button" type="button" id="accords-3">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-3">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и
+                    &nbsp;подписать
+                    договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн&nbsp;и договор придет
+                    вам на
+                    почту.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-4" data-accords="accords-4">
+                <div class="faq__container-question">
+                  <h3>Сколько тренеров работает в клубе и какова их&nbsp;квалификация?</h3>
+                  <button class="faq__button" type="button" id="accords-4">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-4">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и
+                    &nbsp;подписать
+                    договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн&nbsp;и договор придет
+                    вам на
+                    почту.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="faq" id="tabs-2">
+            <ul class="faq__list">
+              <li class="faq__item" data-accord="accord-5" data-accords="accords-5">
+                <div class="faq__container-question">
+                  <h3>Занятия с тренером входят в абонемент?</h3>
+                  <button class="faq__button faq__button--active" type="button" id="accords-5">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer faq__container-answer--active" id="accord-5">
+                  <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале
+                    всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию
+                    по тренажеру или технике выполнения упражнения.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-6" data-accords="accords-6">
+                <div class="faq__container-question">
+                  <h3>Можно ли заморозить абонемент?</h3>
+                  <button class="faq__button" type="button" id="accords-6">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-6">
+                  <p>Нет, к сожалению абонемент заморозить нельзя.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-7" data-accords="accords-7">
+                <div class="faq__container-question">
+                  <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+                  <button class="faq__button" type="button" id="accords-7">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-7">
+                  <p>Нет, вы можете ходить в наш зал в любое удобное для вас время.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-8" data-accords="accords-8">
+                <div class="faq__container-question">
+                  <h3>Что такое семейный доступ и доступ для друзей?</h3>
+                  <button class="faq__button" type="button" id="accords-8">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-8">
+                  <p>Семейный доступ это наша эксклюзивная услуга, при которой по одному абонементу могут заниматься
+                    сразу несколько людей.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="faq" id="tabs-3">
+            <ul class="faq__list">
+              <li class="faq__item" data-accord="accord-9" data-accords="accords-9">
+                <div class="faq__container-question">
+                  <h3>Предлагает ли клуб услуги
+                    по консультированию
+                    по вопросам питания?</h3>
+                  <button class="faq__button faq__button--active" type="button" id="accords-9">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer faq__container-answer--active" id="accord-9">
+                  <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит
+                    ваши данные, цели и предложит программу питания.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-10" data-accords="accords-10">
+                <div class="faq__container-question">
+                  <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+                  <button class="faq__button" type="button" id="accords-10">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-10">
+                  <p>В нашем центре проводятся ежегодные соревнования super games.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-11" data-accords="accords-11">
+                <div class="faq__container-question">
+                  <h3>Можно ли приобрести в центре спортивное питание?</h3>
+                  <button class="faq__button" type="button" id="accords-11">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-11">
+                  <p>Вы можете приобрести специальное питание в нашем магазине, по очень выгодным ценам.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-12" data-accords="accords-12">
+                <div class="faq__container-question">
+                  <h3>Есть ли в центре детская комната?</h3>
+                  <button class="faq__button" type="button" id="accords-12">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-12">
+                  <p>Нет, к сожалению такой комнаты в нашем центре нет.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="faq" id="tabs-4">
+            <ul class="faq__list">
+              <li class="faq__item" data-accord="accord-13" data-accords="accords-13">
+                <div class="faq__container-question">
+                  <h3>Есть в фитнес-центре дресс-код?</h3>
+                  <button class="faq__button faq__button--active" type="button" id="accords-13">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer faq__container-answer--active" id="accord-13">
+                  <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
+                    Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                    шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                    тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-14" data-accords="accords-14">
+                <div class="faq__container-question">
+                  <h3>Можно ли приводить с собой детей на тренировки?</h3>
+                  <button class="faq__button" type="button" id="accords-14">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-14">
+                  <p>В целях безопасности вашего ребенка, приводить с собой детей на занятия нельзя.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-15" data-accords="accords-15">
+                <div class="faq__container-question">
+                  <h3>Какие дополнительные правила посещения центра?</h3>
+                  <button class="faq__button" type="button" id="accords-15">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-15">
+                  <p>Со списком всех дополнительных правил, вы можете ознакомиться на нашем сайте в специальном
+                    разделе, или по приходу в зал проконсультирвоаться с нашими менеджерами.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item" data-accord="accord-16" data-accords="accords-16">
+                <div class="faq__container-question">
+                  <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+                  <button class="faq__button" type="button" id="accords-16">
+                    <span class="visually-hidden">открыть ответ на вопрос</span>
+                  </button>
+                </div>
+                <div class="faq__container-answer" id="accord-16">
+                  <p>Да, такая справка необходима, пройти медосмотр вы также можете в нашем центре на первом этаже.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews" data-test="reviews">
+      <div class="reviews__wrapper">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__container">
+          <div class="reviews__slider swiper">
+            <ul class="reviews__list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/elipse/ellipse-tablet@1x.webp 1x, img/elipse/ellipse-tablet@2x.webp 2x" width="80"
+                    height="80">
+                  <source type="image/webp"
+                    srcset="img/elipse/ellipse-mobile@1x.webp 1x, img/elipse/ellipse-mobile@2x.webp 2x" width="68"
+                    height="68">
+                  <source type="image/jpeg" media="(min-width: 768px)"
+                    srcset="img/elipse/ellipse-tablet@1x.png 1x, img/elipse/ellipse-tablet@2x.png 2x" width="80"
+                    height="80">
+                  <img src="./img/elipse/ellipse-mobile@1x.png" width="68" height="68"
+                    srcset="img/elipse/ellipse-mobile@2x.png 2x" alt="Отзыв клиента">
+                </picture>
+                <div>
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры
+                    обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+                  </p>
+                </div>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/elipse/ellipse-tablet@1x.webp 1x, img/elipse/ellipse-tablet@2x.webp 2x" width="80"
+                    height="80">
+                  <source type="image/webp"
+                    srcset="img/elipse/ellipse-mobile@1x.webp 1x, img/elipse/ellipse-mobile@2x.webp 2x" width="68"
+                    height="68">
+                  <source type="image/jpeg" media="(min-width: 768px)"
+                    srcset="img/elipse/ellipse-tablet@1x.png 1x, img/elipse/ellipse-tablet@2x.png 2x" width="80"
+                    height="80">
+                  <img src="./img/elipse/ellipse-mobile@1x.png" width="68" height="68"
+                    srcset="img/elipse/ellipse-mobile@2x.png 2x" alt="Отзыв клиента">
+                </picture>
+                <div>
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в Supergym уже больше года. Нравится, что&nbsp;в клубе всегда чисто, тренажёры обновляют,
+                    персонал дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="reviews__button reviews__button--prev" type="button"><span class="visually-hidden">предыдущий
+              слайд</span></button>
+          <button class="reviews__button reviews__button--next" type="button"><span class="visually-hidden">следующий
+              слайд</span></button>
+        </div>
+      </div>
+    </section>
+    <div class="opportunities" data-test="form">
+      <section class="free-lesson">
+        <div class="free-lesson__wrapper">
+          <h2 class="free-lesson__title">Бесплатное занятие</h2>
+          <form class="form" method="post" action="https://echo.htmlacademy.ru/">
+            <div class="form__container">
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="visually-hidden" for="confirm-name">Введите имя</label>
+                  <input class="form__field" type="text" id="confirm-name" name="confirm-name" placeholder="Имя"
+                    required pattern="^[А-Яа-яЁё\s]+$" minlength="2" maxlength="25">
+                  <span class="form__error visually-hidden"></span>
+                </li>
+                <li class="form__title">
+                  <label class="visually-hidden" for="confirm-phone">Введите телефон</label>
+                  <input class="form__field" type="tel" id="confirm-phone" name="confirm-phone" placeholder="Телефон"
+                    required pattern="^((\+7|)+([0-9]){10})$" minlength="5" maxlength="15">
+                  <span class="form__error visually-hidden"></span>
+                </li>
+              </ul>
+            </div>
+            <button class="form__button" type="submit">отправить</button>
+          </form>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item usefull-info">
+              <h3 class="usefull-info__title">Адрес:</h3>
+              <p>г. Омск, ул. 60 лет Октября, 7</p>
+            </li>
+            <li class="contacts__item usefull-info">
+              <h3 class="usefull-info__title">График работы:</h3>
+              <p>Пн-Вс: с 8:00 до 22:00</p>
+            </li>
+            <li class="contacts__item usefull-info">
+              <h3 class="usefull-info__title">Телефон:</h3>
+              <a href="#">8 800 555-55-55</a>
+            </li>
+            <li class="contacts__item usefull-info">
+              <h3 class="usefull-info__title">Email:</h3>
+              <a href="#">oмск@supergym.ru</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer" data-test="footer">
+    <div class="footer__wrapper">
+      <div class="footer-logo">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1366px)" srcset="img/logo.svg" width="130" height="26">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="img/logo.svg" width="110" height="22">
+          <img class="footer-logo__img" src="./img/logo.svg" width="100" height="20" alt="логотип SUPERGYM">
+        </picture>
+      </div>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="#">Услуги</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Абонементы</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Акции</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Тренеры</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Расписание</a>
+        </li>
+      </ul>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__item-link social__item-link--vk" href="#"><span class="visually-hidden">мы
+              вконтакте</span></a>
+        </li>
+        <li class="social__item">
+          <a class="social__item-link social__item-link--ok" href="#">
+            <span class="visually-hidden">мы в одноклассниках</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__item-link social__item-link--reddit" href="#">
+            <span class="visually-hidden">мы на реддите</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="/js/main.js" type="module"></script>
+</body>
 
 </html>

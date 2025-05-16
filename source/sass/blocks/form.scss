@@ -1,0 +1,136 @@
+.form__list {
+  display: flex;
+  flex-direction: column;
+
+  @include reset-list;
+
+  gap: 34px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+
+    gap: 31px;
+  }
+}
+
+.form__container {
+  margin: 0;
+  margin-bottom: 36px;
+  padding: 0;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.form__field {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 4px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+
+  color: #74819c;
+  border: 1px solid #102654;
+  border-bottom: 1px solid rgb(116, 129, 156);
+  background-color: #102654;
+
+  &:hover {
+    border-bottom: 1px solid rgb(255, 255, 255);
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    color: rgb(255, 255, 255);
+  }
+
+  &:focus {
+    border: 1px solid rgb(255, 255, 255);
+
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:focus-visible {
+    border: 1px solid #102654;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    padding-bottom: 3px;
+
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 220px;
+    padding-bottom: 2px;
+  }
+}
+
+.form__button {
+  box-sizing: border-box;
+  width: 290px;
+  padding: 22px 106px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+
+  &:hover {
+    color: #103aae;
+    background-color: #ffffff;
+  }
+
+  &:focus {
+    border: 2px solid #000000;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  &:active {
+    color: #102654;
+    background-color: #ffffff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    border: 2px solid rgb(255, 255, 255);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+    padding-top: 26px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+    margin-left: 1px;
+    padding-top: 26px;
+    padding-bottom: 24px;
+  }
+}

@@ -1,0 +1,166 @@
+.stocks-year {
+  @media (min-width: $tablet-width) {
+    display: flex;
+
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-left: 1px;
+  }
+
+  img {
+    display: block;
+
+    margin: 0 auto;
+  }
+}
+
+.stocks-year__container {
+  box-sizing: border-box;
+  padding: 30px;
+  padding-top: 31px;
+
+  color: #ffffff;
+  background-color: #ed0233;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 461px;
+    padding: 40px 45px;
+    padding-bottom: 40px;
+
+    gap: 20px;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 9px;
+
+    font-size: 22px;
+    line-height: 22px;
+
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+
+      text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 24px;
+
+      text-align: left;
+    }
+
+
+    &:nth-child(2) {
+      margin: 0;
+      margin-bottom: 28px;
+
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 64px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 40px;
+
+        font-size: 70px;
+        line-height: 70px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &:nth-child(3) {
+      margin: 0;
+    }
+  }
+}
+
+.stocks-year__button {
+  display: block;
+
+  width: 73px;
+  margin: 0 auto;
+  margin-top: 29px;
+  padding: 0;
+  padding-bottom: 4px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    border-bottom: 1px solid transparent;
+    outline: 1px solid rgb(255, 255, 255);
+    outline-offset: 10px;
+  }
+
+  &:active {
+    color: #ffffff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 73px;
+    margin: 0;
+    margin-top: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 74px;
+    margin-top: auto;
+    margin-left: -1px;
+  }
+}

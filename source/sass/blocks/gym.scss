@@ -1,0 +1,134 @@
+.gym__wrapper {
+  position: relative;
+
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    width: 678px;
+    padding-top: 60px;
+    padding-bottom: 113px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+
+    width: 1160px;
+    padding-top: 120px;
+    padding-bottom: 232px;
+  }
+}
+
+.gym__container {
+  width: 290px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 355px;
+    margin: 0;
+  }
+}
+
+.gym__content {
+  margin: 0;
+
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    width: 502px;
+    margin: 0 auto;
+    margin-left: 88px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 355px;
+    margin-left: 0;
+
+    text-align: left;
+  }
+
+  &:nth-child(4) {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+
+      margin-top: 8px;
+    }
+  }
+}
+
+.gym__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+
+    font-size: 42px;
+    line-height: 42px;
+
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+
+    font-size: 54px;
+    line-height: 54px;
+
+    text-align: left;
+  }
+}
+
+.gym__preview {
+  margin: 0;
+  margin-bottom: 37px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+
+    font-size: 20px;
+
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 95px;
+
+    font-size: 22px;
+    line-height: 22px;
+
+    text-align: left;
+  }
+}
+
+.gym__img {
+  @media (min-width: $desktop-width) {
+    margin-left: 145px;
+  }
+}

@@ -1,4 +1,40 @@
-// Vendor
-// ---------------------------------
+/* GLOBAL */
 
-@import "vendor/normalize";
+@import "./common/fonts";
+@import "./common/variables";
+@import "./common/visually-hidden";
+@import "./common/mixins";
+
+/* BLOCKS */
+@import "./blocks/page";
+@import "./blocks/main-header";
+@import "./blocks/phone-header";
+@import "./blocks/fitness-center";
+@import "./blocks/program-activities";
+@import "./blocks/preview";
+@import "./blocks/gym";
+@import "./blocks/video";
+@import "./blocks/season-ticket";
+@import "./blocks/filter";
+@import "./blocks/offers";
+@import "./blocks/super-games";
+@import "./blocks/date";
+@import "./blocks/jury";
+@import "./blocks/mask";
+@import "./blocks/advantages";
+@import "./blocks/stocks";
+@import "./blocks/stocks-year";
+@import "./blocks/great-deals";
+@import "./blocks/free-month";
+@import "./blocks/question-answer";
+@import "./blocks/discount";
+@import "./blocks/reviews";
+@import "./blocks/faq";
+@import "./blocks/faq-container";
+@import "./blocks/opportunities";
+@import "./blocks/free-lesson";
+@import "./blocks/form";
+@import "./blocks/contacts";
+@import "./blocks/footer";
+@import "./blocks/social";
+@import "./blocks/usefull-info";

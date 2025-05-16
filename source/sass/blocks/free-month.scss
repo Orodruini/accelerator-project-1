@@ -1,0 +1,128 @@
+.free-month {
+  box-sizing: border-box;
+  width: 290px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  padding-top: 21px;
+
+  border-width: 7px;
+  border-style: solid;
+  border-image: linear-gradient(135.58deg, rgb(209, 10, 66) 1.12%, rgb(0, 53, 159) 100%);
+  border-image-slice: 1;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 324px;
+    margin: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    padding: 17px;
+    padding-top: 19px;
+    padding-bottom: 21px;
+    padding-left: 20px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 10px;
+
+      font-size: 26px;
+      line-height: 26px;
+
+      text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 9px;
+
+      text-align: left;
+    }
+  }
+
+  p {
+    margin: 0 auto;
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+
+      font-size: 16px;
+      line-height: 24px;
+
+      text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+
+      text-align: left;
+    }
+  }
+}
+
+.free-month__button {
+  padding: 0;
+  padding-bottom: 3px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: #1c3374;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(116, 129, 156);
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: #1c3374;
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+    outline: 1px solid #1c3374;
+    outline-offset: 10px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    width: 73px;
+    margin: 0;
+    margin-top: 30px;
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+  }
+}

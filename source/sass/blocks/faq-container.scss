@@ -1,0 +1,33 @@
+.faq-container {
+  display: flex;
+}
+
+.faq-container__button {
+  display: flex;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid rgb(28, 51, 116);
+  border-radius: 50%;
+  background-color: inherit;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  &::after {
+    content: "";
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    margin: auto;
+
+    background-color: #102654;
+
+    mask-size: 20px 20px;
+    mask-image: url("/__spritemap#sprite-plus-view");
+  }
+}
